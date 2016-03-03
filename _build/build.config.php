@@ -36,6 +36,10 @@ define('BUILD_TEMPLATE_UPDATE', true);
 define('BUILD_CHUNK_STATIC', false);
 define('BUILD_TEMPLATE_STATIC', false);
 
+
+$BUILD_VALIDATORS = array(
+);
+
 $BUILD_RESOLVERS = array(
     'setup',
     'vendors',

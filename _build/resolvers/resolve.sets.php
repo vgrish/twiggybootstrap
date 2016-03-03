@@ -10,27 +10,27 @@ switch ($options[xPDOTransport::PACKAGE_ACTION]) {
     case xPDOTransport::ACTION_INSTALL:
     case xPDOTransport::ACTION_UPGRADE:
 
-        foreach (array('pdopage', 'pdomenu') as $v) {
+        foreach (array('pdoPage', 'pdoMenu') as $sname) {
             /* @var modSnippet $snippet */
-            if (!$snippet = $modx->getObject('modSnippet', array('name' => $v))) {
+            if (!$snippet = $modx->getObject('modSnippet', array('name' => $sname))) {
                 continue;
             }
-            $sets = (array)include $sources['build'] . 'sets/set.' . $v . '.php';
+
+            $sets = (array)include MODX_ASSETS_PATH . 'components/twiggybootstrap/elements/sets/set.' . strtolower($sname) . '.php';
             if (empty($sets)) {
                 continue;
             }
 
             foreach ($sets as $name => $property) {
-
-                $property = array_merge(
-                    array('properties'=> $property), array('name' => $name)
-                );
+                $name = $name . ucfirst($sname);
 
                 /** modPropertySet $propertySet */
                 if (!$propertySet = $modx->getObject('modPropertySet', array('name' => $name))) {
                     $propertySet = $modx->newObject('modPropertySet');
                 }
-                $propertySet->fromArray($property,'', true, true);
+
+                $propertySet->set('properties', $property);
+                $propertySet->set('name', $name);
                 $propertySet->save();
 
                 if ($snippet->addPropertySet($propertySet)) {

@@ -39,7 +39,7 @@
             <a class='navbar-brand' href='/'>{{ modx.config['site_name'] }}</a>
         </div>
         <div class="navbar-collapse navbar-responsive-collapse collapse" aria-expanded="false" style="height: 1px;">
-            {{ runSnippet("pdoMenu@twbt", {
+            {{ runSnippet("pdoMenu@TwbtPdoMenu", {
             "startId": 0,
             "level": 2,
             "tplParentRow": "@INLINE
@@ -72,7 +72,7 @@
     <h3>{{ modx.config['site_name'] }}</h3>
     {{ modx.resource.content }}
 
-    {{ runSnippet("!pdoPage@twbt", {
+    {{ runSnippet("!pdoPage@TwbtPdoPage", {
     "element": "pdoResources",
     "parents": 0,
     "limit": 5,
