@@ -28,6 +28,11 @@ switch ($options[xPDOTransport::PACKAGE_ACTION]) {
                 'https://github.com/thomaspark/bootswatch/archive/gh-pages.zip'
             ),
             array(
+                'bootstrapmd',
+                MODX_ASSETS_PATH . 'components/twiggybootstrap/vendor/',
+                'https://github.com/FezVrasta/bootstrap-material-design/archive/master.zip'
+            ),
+            array(
                 'fancybox',
                 MODX_ASSETS_PATH . 'components/twiggybootstrap/vendor/',
                 'https://github.com/fancyapps/fancyBox/archive/master.zip'

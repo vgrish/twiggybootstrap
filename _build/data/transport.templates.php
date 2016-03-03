@@ -2,9 +2,10 @@
 
 $templates = array();
 $tmp = array(
-    'twiggy.base'  => array('file' => 'base'),
-    'twiggy.main'  => array('file' => 'main'),
-    'twiggy.inner' => array('file' => 'inner'),
+    'twbt.base'  => array('file' => 'base'),
+    'twbt.main'  => array('file' => 'main'),
+    'twbt.inner' => array('file' => 'inner'),
+
 );
 
 foreach ($tmp as $k => $v) {

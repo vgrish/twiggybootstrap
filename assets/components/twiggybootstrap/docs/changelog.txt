@@ -1,5 +1,10 @@
 Changelog for TwiggyBootstrap.
 
+1.0.2-beta
+==============
+- Add PropertySet
+- Add bootstrap-material-design
+
 1.0.1-beta
 ==============
 - Remove vendors

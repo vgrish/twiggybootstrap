@@ -1,4 +1,4 @@
-{% extends 'template|twiggy.main' %}
+{% extends 'template|twbt.main' %}
 
 {% block container %}
 
