@@ -58,7 +58,7 @@ $tmp = array(
         ),
         'tplPageWrapper'     => array(
             'type'  => 'textfield',
-            'value' => '@INLINE <ul class=\'pagination pagination-lg\'>{{ _[\'prev\'] }}{{ _[\'pages\'] }}{{ _[\'next\'] }}</ul>',
+            'value' => '@INLINE <ul class=\'pagination\'>{{ _[\'prev\'] }}{{ _[\'pages\'] }}{{ _[\'next\'] }}</ul>',
         ),
         'tplPageActive'      => array(
             'type'  => 'textfield',

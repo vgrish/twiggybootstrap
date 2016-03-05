@@ -18,9 +18,10 @@ $sources = array(
     'data'          => $root . '_build/data/',
     'validators'    => $root . '_build/validators/',
     'resolvers'     => $root . '_build/resolvers/',
-    'templates'     => $root . 'assets/components/' . PKG_NAME_LOWER . '/elements/templates/',
-    'chunks'        => $root . 'assets/components/' . PKG_NAME_LOWER . '/elements/chunks/',
-    'docs'          => $root . 'assets/components/' . PKG_NAME_LOWER . '/docs/',
+    'templates'     => $root . 'core/components/' . PKG_NAME_LOWER . '/elements/templates/',
+    'chunks'        => $root . 'core/components/' . PKG_NAME_LOWER . '/elements/chunks/',
+    'source_core'   => $root . 'core/components/' . PKG_NAME_LOWER,
+    'docs'          => $root . 'core/components/' . PKG_NAME_LOWER . '/docs/',
     'source_assets' => $root . 'assets/components/' . PKG_NAME_LOWER,
 );
 unset($root);
@@ -103,9 +104,14 @@ foreach ($BUILD_VALIDATORS as $validate) {
 
 /* now pack in resolvers */
 $vehicle->resolve('file', array(
+    'source' => $sources['source_core'],
+    'target' => "return MODX_CORE_PATH . 'components/';",
+));
+$vehicle->resolve('file', array(
     'source' => $sources['source_assets'],
     'target' => "return MODX_ASSETS_PATH . 'components/';",
 ));
+
 
 foreach ($BUILD_RESOLVERS as $resolver) {
     if ($vehicle->resolve('php', array('source' => $sources['resolvers'] . 'resolve.' . $resolver . '.php'))) {

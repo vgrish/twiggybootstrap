@@ -7,12 +7,12 @@ if (!$modx = $object->xpdo AND !$object->xpdo instanceof modX) {
 switch ($options[xPDOTransport::PACKAGE_ACTION]) {
     case xPDOTransport::ACTION_INSTALL:
     case xPDOTransport::ACTION_UPGRADE:
-        foreach (array('pdoPage', 'pdoMenu') as $sname) {
+        foreach (array('pdoPage', 'pdoMenu', 'pdoCrumbs', 'TicketMeta', 'TicketComments', 'AjaxSnippet') as $sname) {
             /* @var modSnippet $snippet */
             if (!$snippet = $modx->getObject('modSnippet', array('name' => $sname))) {
                 continue;
             }
-            $sets = (array)include MODX_ASSETS_PATH . 'components/twiggybootstrap/elements/sets/set.' . strtolower($sname) . '.php';
+            $sets = (array)include MODX_CORE_PATH . 'components/twiggybootstrap/elements/sets/set.' . strtolower($sname) . '.php';
             if (empty($sets)) {
                 continue;
             }

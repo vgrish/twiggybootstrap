@@ -19,15 +19,11 @@
 {% block navbar -%}
 {% endblock %}
 
-<div class='container'>
+{% block content -%}
+{% endblock %}
 
-    {% block container -%}
-    {% endblock %}
-
-    {% block footer %}
-    {% endblock %}
-
-</div>
+{% block footer %}
+{% endblock %}
 
 {% block script -%}
 {% endblock %}

@@ -6,6 +6,8 @@ $tmp = array(
     'twbt.main'  => array('file' => 'main'),
     'twbt.inner' => array('file' => 'inner'),
 
+    'twbt.ticket.section' => array('file' => 'ticket.section'),
+    'twbt.ticket.ticket'  => array('file' => 'ticket.ticket'),
 );
 
 foreach ($tmp as $k => $v) {
@@ -15,7 +17,7 @@ foreach ($tmp as $k => $v) {
         'id'           => 0,
         'templatename' => $k,
         'description'  => @$v['description'],
-        'content'      => file_get_contents($sources['source_assets'] . '/elements/templates/template.' . $v['file'] . '.tpl'),
+        'content'      => file_get_contents($sources['source_core'] . '/elements/templates/template.' . $v['file'] . '.tpl'),
         'static'       => BUILD_TEMPLATE_STATIC,
         'source'       => 1,
         'static_file'  => 'assets/components/' . PKG_NAME_LOWER . '/elements/templates/template.' . $v['file'] . '.tpl',

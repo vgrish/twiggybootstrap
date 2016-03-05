@@ -3,7 +3,15 @@
 $chunks = array();
 
 $tmp = array(
-    //'tpl.twiggybootstrap.item' => array('file' => 'item'),
+    'twbt.tickets.list'                   => array('file' => 'tickets.list'),
+    'twbt.tickets.meta'                   => array('file' => 'tickets.meta'),
+    'twbt.tickets.comment.form'           => array('file' => 'tickets.comment.form'),
+    'twbt.tickets.comment.wrapper'        => array('file' => 'tickets.comment.wrapper'),
+    'twbt.tickets.comment.one.auth'       => array('file' => 'tickets.comment.one.auth'),
+    'twbt.tickets.ticket.sidebar.latest'  => array('file' => 'tickets.ticket.sidebar.latest'),
+    'twbt.tickets.comment.sidebar.latest' => array('file' => 'tickets.comment.sidebar.latest'),
+
+    'twbt.ajax.wrapper' => array('file' => 'ajax.wrapper'),
 );
 
 // Save chunks for setup options

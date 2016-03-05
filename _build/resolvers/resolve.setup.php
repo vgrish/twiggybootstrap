@@ -131,6 +131,7 @@ switch (@$options[xPDOTransport::PACKAGE_ACTION]) {
         /* Checking and installing required packages */
         $packages = array(
             'pdoTools' => '2.1.0-pl',
+            'AjaxSnippet' => '1.1.1-pl',
         );
 
         foreach ($packages as $package_name => $version) {
